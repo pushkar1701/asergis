@@ -3,10 +3,12 @@ import './App.css';
 import { connect } from 'react-redux';
 import { rtcActionStateToggle } from './actions/RTCAction'
 import Button from '@material-ui/core/Button';
-import rtcService  from './services/rtcServices';
+// import rtcService  from './services/rtcServices';
+import rtcServ from './services/rtcServices';
 
 class App extends Component {
-  rtc = rtcService()
+  rtc = new rtcServ()
+  debugger;
   constructor() {
     super();
     this.rtc.initialize();
